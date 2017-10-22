@@ -23,6 +23,11 @@ public class Beginscherm extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void inapp(View view){
+        Intent intent = new Intent(Beginscherm.this, Inapp.class);
+        startActivity(intent);
+    }
+
     public void miauw(View view){
         Intent intent = new Intent(Beginscherm.this, Miauw.class);
         startActivity(intent);

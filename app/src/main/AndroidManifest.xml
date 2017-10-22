@@ -30,6 +30,7 @@
 
         <activity android:name=".Gokkast_animatie" />
         <activity android:name=".Gyroscoop" android:screenOrientation="landscape" />
+        <activity android:name=".Inapp" />
         <activity android:name=".Miauw" />
         <activity android:name=".Podcast" />
         <activity android:name=".Pokemon" />
