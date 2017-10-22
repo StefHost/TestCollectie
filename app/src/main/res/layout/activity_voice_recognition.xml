@@ -1,0 +1,23 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <Button
+        android:id="@+id/btSpeak"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="speak"
+        android:padding="20dp"
+        android:text="Praten"
+        tools:context=".VoiceRecognitionActivity" />
+
+    <TextView
+        android:id="@+id/TextMatches"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Leeg.."
+        android:textStyle="bold" />
+
+</LinearLayout>
