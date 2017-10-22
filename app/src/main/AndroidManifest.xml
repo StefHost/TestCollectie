@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="nl.stefhost.testcollectie">
+
+    <!-- Gps -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <!-- Miauw -->
+    <uses-permission  android:name="android.permission.WAKE_LOCK"  />
+
+    <!-- Tags schrijven -->
+    <uses-permission android:name="android.permission.NFC" />
+
+    <!-- QR Scanner -->
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".Beginscherm" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".Gokkast_animatie" />
+        <activity android:name=".Gyroscoop" android:screenOrientation="landscape" />
+        <activity android:name=".Miauw" />
+        <activity android:name=".Podcast" />
+        <activity android:name=".Pokemon" />
+
+        <activity android:name=".Video_toevoegen">
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="text/plain" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".Spel_1" />
+        <activity android:name=".Spel_2" />
+        <activity android:name=".StefGame" />
+
+        <activity
+            android:name=".Tags_lezen"
+            android:launchMode="singleTask">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+                <action android:name="android.nfc.action.NDEF_DISCOVERED" />
+                <data android:mimeType="application/nl.stefhost.testcollectie.tags_lezen" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".Tags_schrijven" />
+        <activity android:name=".VoiceRecognition" />
+        <activity android:name=".QR_scanner" />
+
+        <meta-data android:name="com.google.android.gms.vision.DEPENDENCIES" android:value="barcode"/>
+
+    </application>
+
+</manifest>
